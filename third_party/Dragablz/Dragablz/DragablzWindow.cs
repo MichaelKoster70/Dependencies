@@ -51,7 +51,7 @@ namespace Dragablz
 
         static DragablzWindow()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(DragablzWindow), new FrameworkPropertyMetadata(typeof(DragablzWindow)));            
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(DragablzWindow), new FrameworkPropertyMetadata(typeof(DragablzWindow)));
         }
 
         public DragablzWindow()
@@ -61,7 +61,7 @@ namespace Dragablz
             CommandBindings.Add(new CommandBinding(CloseWindowCommand, CloseWindowExecuted));
             CommandBindings.Add(new CommandBinding(MaximizeWindowCommand, MaximizeWindowExecuted));
             CommandBindings.Add(new CommandBinding(MinimizeWindowCommand, MinimizeWindowExecuted));
-            CommandBindings.Add(new CommandBinding(RestoreWindowCommand, RestoreWindowExecuted));                        
+            CommandBindings.Add(new CommandBinding(RestoreWindowCommand, RestoreWindowExecuted));
         }
 
         private static readonly DependencyPropertyKey IsWindowBeingDraggedByTabPropertyKey =
@@ -141,7 +141,7 @@ namespace Dragablz
 
             if (windowResizeThumb == null) return;
 
-            windowResizeThumb.MouseMove += WindowResizeThumbOnMouseMove;                
+            windowResizeThumb.MouseMove += WindowResizeThumbOnMouseMove;
             windowResizeThumb.DragStarted += WindowResizeThumbOnDragStarted;
             windowResizeThumb.DragDelta += WindowResizeThumbOnDragDelta;
             windowResizeThumb.DragCompleted += WindowResizeThumbOnDragCompleted;

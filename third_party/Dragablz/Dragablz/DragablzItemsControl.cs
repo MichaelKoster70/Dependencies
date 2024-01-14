@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
-using System.Windows.Data;
 using System.Windows.Threading;
 using Dragablz.Core;
 
@@ -20,7 +18,7 @@ namespace Dragablz
 
         static DragablzItemsControl()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(DragablzItemsControl), new FrameworkPropertyMetadata(typeof(DragablzItemsControl)));            
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(DragablzItemsControl), new FrameworkPropertyMetadata(typeof(DragablzItemsControl)));
         }        
 
         public DragablzItemsControl()
@@ -32,7 +30,7 @@ namespace Dragablz
             AddHandler(DragablzItem.DragDelta, new DragablzDragDeltaEventHandler(ItemDragDelta));
             AddHandler(DragablzItem.DragCompleted, new DragablzDragCompletedEventHandler(ItemDragCompleted));
             AddHandler(DragablzItem.DragStarted, new DragablzDragStartedEventHandler(ItemDragStarted));
-            AddHandler(DragablzItem.MouseDownWithinEvent, new DragablzItemEventHandler(ItemMouseDownWithinHandlerTarget));                        
+            AddHandler(DragablzItem.MouseDownWithinEvent, new DragablzItemEventHandler(ItemMouseDownWithinHandlerTarget));
         }
 
         public static readonly DependencyProperty FixedItemCountProperty = DependencyProperty.Register(
@@ -52,7 +50,7 @@ namespace Dragablz
         protected override void ClearContainerForItemOverride(DependencyObject element, object item)
         {
             if (ContainerCustomisations != null && ContainerCustomisations.ClearingContainerForItemOverride != null)
-                ContainerCustomisations.ClearingContainerForItemOverride(element, item);            
+                ContainerCustomisations.ClearingContainerForItemOverride(element, item);
 
             base.ClearContainerForItemOverride(element, item);
 
